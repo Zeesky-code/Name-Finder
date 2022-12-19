@@ -27,6 +27,7 @@ public class NameFinder implements Runnable{
 		new CommandLine(new NameFinder()).execute(args);
 	}
 
+
 	@Override
 	public void run() {
 		try{
@@ -45,16 +46,11 @@ public class NameFinder implements Runnable{
 		Span[] names = nameFinder.find(tokens);
 		nameFinder.clearAdaptiveData();
 
-		// Print out the names
-		for (Span name : names) {
-			StringBuilder builder = new StringBuilder();
-			for (int i = name.getStart(); i < name.getEnd(); i++) {
-				builder.append(tokens[i]).append(" ");
+		// Converting the name spans to Strings
+		String [] Names = Span.spansToStrings(names,tokens);
+			for (String Name:Names) {
+				System.out.println(Name);
 			}
-			String Name = builder.toString();
-			System.out.println(Name);
-		}
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
