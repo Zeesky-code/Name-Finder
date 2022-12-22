@@ -47,6 +47,12 @@
             <version>3.4.1</version>
             <type>maven-plugin</type>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <finalName>bim207hw</finalName>
