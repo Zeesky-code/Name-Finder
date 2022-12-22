@@ -52,7 +52,7 @@ public class NameFinder implements Runnable{
 				System.out.println(Name);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("An error occurred, please try with another URL.");
 		}
 
 
